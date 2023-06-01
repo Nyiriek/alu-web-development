@@ -3,4 +3,4 @@ For this project, I replicated a figma desine file using HTML only
 
 
 ## Figma File
-<image width="1440" alt="School Page@2x" src="https://www.figma.com/file/b3btqNdkP0UeXRXtc7XNPv/Diagram---Homepage?type=whiteboard&node-id=3558-0&t=SWynGlutfEtmWPQJ-4.png"
+<image width="1440" alt="School Page@2x" src="https://user-images.githubusercontent.com/67793634/192224177-3a136d6d-9c94-426a-8bda-370f44123684.png">
