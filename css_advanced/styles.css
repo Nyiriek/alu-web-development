@@ -1,15 +1,13 @@
-/*Body section*/
 body {
-    font-family:"Source Sans Pro";
+    font-family: "Source Sans Pro";
     font-style: normal;
 }
 
-/*Header section*/
 header {
     display: flex;
     flex-direction: row;
     flex: auto;
-    background-image: url("./images/background.png");
+    background-image: url("./imgs/background.png");
     padding: 2% 5% 2% 5%;
     filter: grayscale(100%);
     position: absolute;
@@ -43,7 +41,6 @@ header .nav-urls a {
 }
 
 .header-section {
-    /*position: absolute;*/
     left: 20%;
     right: 20%;
     display: flex;
@@ -54,10 +51,9 @@ header .nav-urls a {
     background: radial-gradient(85.9% 85.9% at 50% 14.1%,
             rgba(41, 48, 61, 0.0001) 0%,
             #071629 100%);
-    color: white;       
+    color: white;
 }
 
-/*Get schooled section*/
 .schooled {
     display: flex;
     flex-direction: column;
@@ -74,7 +70,8 @@ header .nav-urls a {
 }
 
 .schooled-text {
-    height: relative;
+    height: 20px;
+    position: relative;
     margin-top: -7%;
     text-align: center;
     font-weight: 700;
@@ -87,17 +84,17 @@ header .nav-urls a {
     margin-right: 38%;
 }
 
-/*Register button section*/
 .register-btn {
     background: #c271ff;
     border-radius: 25px;
     border: none;
     padding: 0.7rem;
     color: white;
-    font-size: 500;
+    font-weight: 500;
     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
     position: relative;
     align-self: center;
+    margin: 2rem;
     padding: 1rem;
 }
 
@@ -164,7 +161,6 @@ main {
     margin: -8px;
 }
 
-/*Quote section*/
 .presenter-section {
     background-color: #c271ff;
     padding: 6%;
@@ -208,7 +204,6 @@ main {
     margin-top: 0;
 }
 
-/*Videos section*/
 .videos-section {
     display: flex;
     flex-direction: column;
@@ -230,7 +225,6 @@ main {
     padding-bottom: 2rem;
 }
 
-/*F.A.Q section*/
 .faq-section h1 {
     font-weight: 300;
     font-size: 60px;
@@ -303,7 +297,6 @@ main {
     color: #c271ff;
 }
 
-/*Membership section*/
 .membership-section {
     color: white;
     background: #071629;
@@ -363,7 +356,6 @@ main {
     padding: 5%;
 }
 
-/*Footer section*/
 footer {
     background: black;
     padding: 1rem;
