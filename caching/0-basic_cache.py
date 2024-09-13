@@ -5,7 +5,6 @@ BaseCaching and is a caching system
 """
 from base_caching import BaseCaching
 
-
 class BasicCache(BaseCaching):
     """Basic Dictionary"""
     def put(self, key, item):
@@ -22,7 +21,6 @@ class BasicCache(BaseCaching):
         Retrieve the value associated with the key from cache_data.
         If key is None or key is not found, return None.
         """
-
         if key is None:
             return None
         return self.cache_data.get(key, None)
