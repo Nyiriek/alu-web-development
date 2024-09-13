@@ -5,14 +5,11 @@ BaseCaching and is a caching system
 """
 from base_caching import BaseCaching
 
-class BaseCaching:
-    def __init__(self):
-        self.cache_data = {}
 
 class BasicCache(BaseCaching):
     """Basic Dictionary"""
     def put(self, key, item):
-        if key or item is None:
+        if key is None or item is None:
             return
         self.cache_data[key] =  item
 
