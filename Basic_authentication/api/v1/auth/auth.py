@@ -19,7 +19,7 @@ class Auth:
         """
         return False
 
-    def authorization_header(self, path: str, excluded_paths: List[str]) -> str:
+    def authorization_header(self, request=None) -> str:
         """_summary_
 
         Args:
