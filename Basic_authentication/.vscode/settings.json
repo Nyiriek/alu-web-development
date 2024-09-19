@@ -3,5 +3,8 @@
     "cSpell.enableFiletypes": [
         "gitignore",
         "sass"
+    ],
+    "cSpell.words": [
+        "jsonify"
     ]
 }
