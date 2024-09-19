@@ -13,8 +13,8 @@ class BasicAuth(Auth):
     """BasicAuth class"""
 
     def extract_base64_authorization_header(self, authorization_header: str) \
-     -> str:
-        """_summary_
+        -> str:
+            """_summary_
 
         Args:
             authorization_header (str): _description_
