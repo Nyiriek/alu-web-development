@@ -15,20 +15,19 @@ class BasicAuth(Auth):
     def extract_base64_authorization_header(self, authorization_header: str) \
         -> str:
             """_summary_
-
-        Args:
+            Args:
             authorization_header (str): _description_
 
-        Returns:
+            Returns:
             str: _description_
-        """
-        if (
-            authorization_header is None
-            or type(authorization_header) is not str
-            or not authorization_header.startswith("Basic ")
-        ):
-            return None
-        return authorization_header[6:]
+            """
+            if (
+                authorization_header is None
+                or type(authorization_header) is not str
+                or not authorization_header.startswith("Basic ")
+                ):
+                return None
+            return authorization_header[6:]
 
     def decode_base64_authorization_header(
         self, base64_authorization_header: str
