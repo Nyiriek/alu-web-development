@@ -33,7 +33,7 @@ class BasicAuth(Auth):
             self,
             base64_authorization_header: str
     ) -> str:
-        """decode base64 auth header"""
+        """_summary_"""
         if base64_authorization_header is None:
             return None
         if type(base64_authorization_header) is not str:
