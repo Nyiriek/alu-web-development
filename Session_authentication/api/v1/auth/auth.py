@@ -1,52 +1,42 @@
 #!/usr/bin/env python3
-"""Create a class to manage the API authentication."""
+"""
+API authentication module
+"""
+
 from flask import request
-from typing import TypeVar, List
+from typing import List, TypeVar
+from os import getenv
 
 
 class Auth:
-    """_summary_
-    """
+    """Authentication"""
+
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        """_summary_
-
-        Args:
-            path (str): _description_
-            excluded_paths (List[str]): _description_
-
-        Returns:
-            bool: _description_
-        """
-        if path is None or excluded_paths is None or excluded_paths == []:
+        """Checks if API routes require authentication"""
+        if path is None or excluded_paths is None or len(excluded_paths) == 0:
             return True
-        path = path + '/' if path[-1] != '/' else path
-        excluded_paths = [p + '/' if p[-1] != '/' else
-                          p for p in excluded_paths]
+        if path[-1] != "/":
+            path += "/"
         if path in excluded_paths:
             return False
         else:
             return True
 
     def authorization_header(self, request=None) -> str:
-        """_summary_
+        """Checks if Authorization request header is present
+        & contains values"""
+        if request is None or "Authorization" not in request.headers:
+            return None
+        else:
+            return request.headers.get("Authorization")
 
-        Args:
-            path (str): _description_
-            excluded_paths (List[str]): _description_
+    def current_user(self, request=None) -> TypeVar("User"):
+        """placeholder"""
+        return None
 
-        Returns:
-            str: _description_
-        """
+    def session_cookie(self, request=None):
+        """Returns cookie value from a request"""
         if request is None:
             return None
-        if request.headers.get('Authorization') is None:
-            return None  # No header
-        return request.headers.get('Authorization')
 
-    def current_user(self, request=None) -> TypeVar('User'):
-        """_summary_
-
-        Returns:
-            _type_: _description_
-        """
-        return None
+        return request.cookies.get(getenv("SESSION_NAME"))
