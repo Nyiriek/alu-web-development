@@ -29,14 +29,12 @@ class DB:
 
     def add_user(self, email: str, hashed_password: str) -> User:
         """
-
         Args:
             user (_type_): _description_
-
         Returns:
             _type_: _description_
         """
-        User = User(email=email, hashed_password=hashed_password)
+        user = User(email=email, hashed_password=hashed_password)
         self._session.add(User)
         self._session.commit()
-        return User
+        return user
